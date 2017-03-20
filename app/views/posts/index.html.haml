@@ -1,16 +1,4 @@
 .row
-  .col-md-8
-  .col-md-4
-    -if current_user
-      = link_to(current_user.name, edit_user_registration_path)
-      \|
-      = link_to('Logout', destroy_user_session_path, :method => :delete)
-    -else
-      =link_to 'Sign Up', new_user_registration_path
-      \|
-      =link_to 'Sign In', new_user_session_path
-
-.row
   .col-lg-12
     %h1 Listing posts
 
