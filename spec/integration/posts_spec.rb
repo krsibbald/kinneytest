@@ -4,7 +4,9 @@ feature 'posts' do
 
   scenario 'no way to add post' do
     visit posts_path
-    refute(page.has_content?("+ New Post"))
+    assert(page.has_content?("+ New Post"))
+    click_on "+ New Post"
+    expect(current_path).to eq new_user_session_path
   end
 
   describe 'logged in' do
