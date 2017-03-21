@@ -7,4 +7,8 @@ RSpec.describe User, type: :model do
     second_user = FactoryGirl.build(:user, email: 'beast@castle.com')
     expect(second_user.valid?).to eq false
   end
+  it "email must be in good format" do
+    user = FactoryGirl.build(:user, email: 'gaston')
+    expect(user.valid?).to eq false
+  end
 end
