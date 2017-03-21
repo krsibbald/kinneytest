@@ -13,7 +13,6 @@
 
 -@comments.each do |comment|
   =render partial: 'comments/comment', locals: {comment: comment}
-.well
-  =render partial: 'comments/form', locals: {post: @post}
-
-
+-if current_user
+  .well
+    =render partial: 'comments/form', locals: {post: @post}

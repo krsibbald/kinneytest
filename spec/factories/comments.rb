@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :comment do
-    post nil
-    body "MyText"
-    user nil
+    post
+    body "Put our service to the test"
+    user
   end
 end

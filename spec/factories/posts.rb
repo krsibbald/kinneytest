@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :post do
-    title "MyString"
-    body "MyText"
-    user nil
+    title "Beauty and the Beast"
+    body "Be Our Guest"
+    user
   end
 end
