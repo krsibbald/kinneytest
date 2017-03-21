@@ -6,14 +6,13 @@
         - @comment.errors.full_messages.each do |msg|
           %li= msg
 
-
-
   .field
 
     = f.hidden_field :user_id, { :value => @comment.user.id }
     = f.hidden_field :post_id, { :value => @comment.post.id }
 
-    = f.label :body, "comment"
+    = f.label :body, "Comment"
+    %br
     = f.text_area :body
   .actions
     = f.submit 'Save'

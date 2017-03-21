@@ -1,15 +1,19 @@
-%p#notice= notice
 
-%div
-  %p
+%div.panel.panel-primary
+  .panel-heading
     %b Title:
     = @post.title
-  %p
-    %b Body:
-    = @post.body
-  %p
+    by
     %b User:
     = @post.user.name
-%hr
-%div
+  .panel-body
+    %b Body:
+    = @post.body
+
+
+-@comments.each do |comment|
+  =render partial: 'comments/comment', locals: {comment: comment}
+.well
   =render partial: 'comments/form', locals: {post: @post}
+
+

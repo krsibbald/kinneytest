@@ -1,0 +1,11 @@
+.panel-info
+  .panel-heading
+    %b 
+      Comment by:
+    =comment.user.name
+    %b
+      At: 
+    =time_ago_in_words comment.created_at
+    ago
+  .panel-body
+    =comment.body
