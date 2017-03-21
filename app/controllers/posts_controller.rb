@@ -5,12 +5,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc).all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new(user: current_user, post: @post)
   end
 
   # GET /posts/new
