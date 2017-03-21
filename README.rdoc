@@ -2,5 +2,7 @@
 
 This is a barebones message board app
 
+View the app here: https://kinneytest.herokuapp.com/
+
 * Ruby Version: 2.3.0p0
 * Rails Version: Rails 4.2.6
