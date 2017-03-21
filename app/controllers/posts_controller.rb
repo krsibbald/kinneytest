@@ -5,14 +5,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order(created_at: :desc).all
+    @posts = Post.newest_first.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @comment = Comment.new(user: current_user, post: @post)
-    @comments = @post.comments.order(created_at: :asc)
+    @comments = @post.comments.oldest_first
   end
 
   # GET /posts/new
